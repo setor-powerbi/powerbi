@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio Pessoal</title>
+    <link rel="stylesheet" href="styleprojeto.css">
+
+    <style>
+     /* Estilos para esconder todos os iframes, exceto o primeiro */
+      iframe {
+          display: none;
+      }
+      
+    </style>
+
+</head>
+
+<body>
+     
+
+
+<!--começa os menus-->  
+
+<nav>
+    <ul>
+        <li> <a href="index.html">Home</a></li>
+        <li> <a href="sobre.html">Duvidas</a></li>
+        <li> <a href="portifolio.html">Portifolio</a></li>
+        <li class="menuactive" onmouseover="showSubmenu()" onmouseout="hideSubmenu()"> <a href="#">Material</a>
+            <div class="submenu" id="submenu">
+                <a href="#" onclick="mostrarIframe('solicitacao_de_compra')">Solicitação de compra</a>
+                <a href="#" onclick="mostrarIframe('insumos_industriais')">Insumos industriais</a>
+                <a href="#" onclick="mostrarIframe('refeições')">Refeições</a>
+            </div>
+        </li>
+        <li class="titulo-projeto"> <h2 id="titulo_projeto"> ⏪ selecionar relatório </h2>  </li>
+    </ul>
+  </nav>
+
+
+  <!--fecha todo nav-->
+     
+   
+  <div class="paineis"> 
+
+     
+       <iframe id="solicitacao_de_compra" src="https://app.powerbi.com/view?r=eyJrIjoiYWU2MmM0MTAtMzExYy00ZDIzLWI5MGYtYzExOGFkZDg4ZDFlIiwidCI6ImYzM2U3Mjk2LTJjNzMtNGIzYi05NzZhLTUwMGQ1NmRlMDNlYiJ9" width="100%" style="height: 99vh;"></iframe>
+       <iframe id="insumos_industriais" src="https://app.powerbi.com/view?r=eyJrIjoiNzlkOTA1MGYtMjEwYS00NzU0LWJmODgtNTk5MWQ0YjAzY2ExIiwidCI6ImYzM2U3Mjk2LTJjNzMtNGIzYi05NzZhLTUwMGQ1NmRlMDNlYiJ9" width="100%" style="height: 99vh;"></iframe>
+       <iframe id="refeições" src="https://app.powerbi.com/view?r=eyJrIjoiN2ZkNWFjYTEtNGM3Zi00MWI5LWFjNTAtNWI4OWVlM2YzNzFjIiwidCI6ImYzM2U3Mjk2LTJjNzMtNGIzYi05NzZhLTUwMGQ1NmRlMDNlYiJ9" width="100%" style="height: 99vh;"></iframe>
+       
+
+  </div>
+   
+
+  <div id="loader" class="loader"></div>
+  <h1 id="message" class="hidden">Site carregado, por favor selecione seu relatório✅</h1>
+
+   <!-- Função para definir qual iframe aparecer -->
+
+  <script>
+    function mostrarIframe(id) {
+        // Esconde todos os iframes
+        var iframes = document.querySelectorAll('iframe');
+        iframes.forEach(function(iframe) {
+            iframe.style.display = 'none';
+        });
+        
+        // Mostra apenas o iframe com o id correspondente
+        var iframeMostrar = document.getElementById(id);
+        iframeMostrar.style.display = 'block';
+
+        // Atualiza o título do projeto com base no iframe selecionado
+        document.getElementById('titulo_projeto').textContent = "  ⏩ " + id + " | expandir tela F11" 
+    }
+  </script>
+  
+  <script>
+    function showSubmenu() {
+        document.getElementById("submenu").style.display = "block";
+    }
+
+    function hideSubmenu() {
+        document.getElementById("submenu").style.display = "none";
+    }
+</script>
+  
+
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio Pessoal</title>
+    <link rel="stylesheet" href="styleprojeto.css">
+
+    <style>
+     /* Estilos para esconder todos os iframes, exceto o primeiro */
+      iframe {
+          display: none;
+      }
+      
+    </style>
+
+</head>
+
+<body>
+     
+
+
+<!--começa os menus-->  
+
+<nav>
+    <ul>
+        <li> <a href="index.html">Home</a></li>
+        <li> <a href="sobre.html">Duvidas</a></li>
+        <li> <a href="portifolio.html">Portifolio</a></li>
+        <li class="menuactive" onmouseover="showSubmenu()" onmouseout="hideSubmenu()"> <a href="#">Plan/Custo</a>
+            <div class="submenu" id="submenu">
+                <a href="#" onclick="mostrarIframe('investimentos')">Investimentos</a>
+                <a href="#" onclick="mostrarIframe('investimentos_novo')">Investimentos Novo</a>
+                <a href="#" onclick="mostrarIframe('orcado_x_realizado')">Orçado x Realizado</a>
+                <a href="#" onclick="mostrarIframe('acompanhamento_indicadores')">Acompanhamento Indicadores</a>
+                <a href="#" onclick="mostrarIframe('acompanhamento_orcado_safra')">Acompanhamento Orcado SF</a>
+                <a href="#" onclick="mostrarIframe('custo_de_formação')">Custo de Formação</a>
+
+            </div>
+        </li>
+        <li class="titulo-projeto"> <h2 id="titulo_projeto"> ⏪ selecionar relatório </h2>  </li>
+    </ul>
+ </nav>
+
+
+  <!--fecha todo nav-->
+     
+   
+  <div class="paineis"> 
+
+     
+       <iframe id="investimentos" src="https://app.powerbi.com/view?r=eyJrIjoiZWQ0MTc2NDgtNmYyZi00MjhkLTg5MzctOTVkNWUzNTM1YjAyIiwidCI6ImYzM2U3Mjk2LTJjNzMtNGIzYi05NzZhLTUwMGQ1NmRlMDNlYiJ9" width="100%" style="height: 99vh;"></iframe>
+       <iframe id="investimentos_novo" src="https://app.powerbi.com/view?r=eyJrIjoiMDAxNGQyYzItMTljNy00OTgwLTgzMjEtNWQxYmYwNDliNjVhIiwidCI6ImYzM2U3Mjk2LTJjNzMtNGIzYi05NzZhLTUwMGQ1NmRlMDNlYiJ9" width="100%" style="height: 99vh;"></iframe>
+       <iframe id="orcado_x_realizado" src="https://app.powerbi.com/view?r=eyJrIjoiOTA5OGZkZWMtMTcwOC00OTczLTg0OTctNzMxMDUxMDhmMTA3IiwidCI6ImYzM2U3Mjk2LTJjNzMtNGIzYi05NzZhLTUwMGQ1NmRlMDNlYiJ9" width="100%" style="height: 99vh;"></iframe>
+       <iframe id="acompanhamento_indicadores" src="https://app.powerbi.com/view?r=eyJrIjoiMDkyYmExMTQtZmYwOS00ZjMyLWI4MTAtMzI3ZTQyZTBjMTEyIiwidCI6ImYzM2U3Mjk2LTJjNzMtNGIzYi05NzZhLTUwMGQ1NmRlMDNlYiJ9" width="100%" style="height: 99vh;"></iframe>
+       <iframe id="acompanhamento_orcado_safra" src="https://app.powerbi.com/view?r=eyJrIjoiMDU1MjVlYmQtMzUwNS00YTQ1LWEzYWYtNWZmNWM1NjEwOWMyIiwidCI6ImYzM2U3Mjk2LTJjNzMtNGIzYi05NzZhLTUwMGQ1NmRlMDNlYiJ9" width="100%" style="height: 99vh;"></iframe>
+       <iframe id="custo_de_formação" src="https://app.powerbi.com/view?r=eyJrIjoiYzc5ZTFiNDYtZDc3My00MjM3LThhNTctN2QxNGQ4ZTA0OThkIiwidCI6ImYzM2U3Mjk2LTJjNzMtNGIzYi05NzZhLTUwMGQ1NmRlMDNlYiJ9" width="100%" style="height: 99vh;"></iframe>
+       
+                                 
+
+
+       
+  </div>
+
+  <div id="loader" class="loader"></div>
+  <h1 id="message" class="hidden">Site carregado, por favor selecione seu relatório✅</h1>
+
+
+   <!-- Função para definir qual iframe aparecer -->
+
+  <script>
+    function mostrarIframe(id) {
+        // Esconde todos os iframes
+        var iframes = document.querySelectorAll('iframe');
+        iframes.forEach(function(iframe) {
+            iframe.style.display = 'none';
+        });
+        
+        // Mostra apenas o iframe com o id correspondente
+        var iframeMostrar = document.getElementById(id);
+        iframeMostrar.style.display = 'block';
+
+        // Atualiza o título do projeto com base no iframe selecionado
+        document.getElementById('titulo_projeto').textContent = "  ⏩ " + id + " | expandir tela F11" 
+    }
+  </script>
+  
+  <script>
+    function showSubmenu() {
+        document.getElementById("submenu").style.display = "block";
+    }
+
+    function hideSubmenu() {
+        document.getElementById("submenu").style.display = "none";
+    }
+</script>
+  
+</script>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

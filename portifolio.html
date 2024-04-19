@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio Pessoal</title>
+    <link rel="stylesheet" href="styleportifolio.css">
+
+    
+
+</head>
+
+
+
+<style>
+
+  .logo{
+    margin-left: 50%;
+    margin-top: 68px;
+    position: relative;
+    height: auto;
+    text-align: center;
+    max-width: "450";
+    max-height:"80";
+    margin-left: 50px;
+ 
+ } 
+
+</style>
+
+
+<body>
+     
+
+
+<!--começa os menus-->  
+
+  <nav> 
+          <ul>
+              <li> <a href="index.html">Home</a></li>
+              <li> <a href="sobre.html">Duvidas</a></li>
+              <li class="portifolioactive"> <a href="portifolio.html">Portifolio</a>         
+                </li>
+          </ul>
+  </nav> 
+
+   
+  <div class="logo">
+
+    <img src="./image/logo-com-fundo.png"
+    width="420"
+    height="80"
+    alt="logo"
+    />
+
+  </div>
+
+
+  <div class="cards-container">
+  <div class="card" onmouseover="showButton(this)" onmouseout="hideButton(this)">
+    <h2>AGRICOLA:</h2>
+    <p>Informações sobre entrada de cana, controle de qualidade agricola, ATR, TCH.</p>
+    <button class="button" onclick="location.href='agricola.html'">Acessar Projeto</button>
+  </div>
+  
+  <div class="card" onmouseover="showButton(this)" onmouseout="hideButton(this)">
+    <h2>PLAN/CUSTO:</h2>
+    <p>Informações sobre investimentos, entrada de bens, orcado x real, custo de formação e outros.</p>
+    <button class="button" onclick="location.href='plan_custo.html'">Acessar Projeto</button>
+  </div>
+
+  <div class="card" onmouseover="showButton(this)" onmouseout="hideButton(this)">
+    <h2>MATERIAL:</h2>
+    <p>Informações sobre solicitação de compra, insumos, produto em estoque e outros.</p>
+    <button class="button" onclick="location.href='material.html'">Acessar Projeto</button>
+  </div>
+  
+  <div class="card" onmouseover="showButton(this)" onmouseout="hideButton(this)">
+    <h2>COMERCIAL:</h2>
+    <p>Informações sobre vendas de produtos, acompanhamento de preço, preço bruto preço liquido, preço de venda, venda interna/externa.</p>
+    <button class="button" onclick="location.href='comercial.html'">Acessar Projeto</button>
+  </div>
+
+  <div class="card" onmouseover="showButton(this)" onmouseout="hideButton(this)">
+    <h2>INDUSTRIA:</h2>
+    <p>Informações sobre paradas, produção, eficiencia industrial, boletim industrial e outros.</p>
+    <button class="button" onclick="location.href='industria.html'">Acessar Projeto</button>
+  </div>
+  
+  <div class="card" onmouseover="showButton(this)" onmouseout="hideButton(this)">
+    <h2>PCM:</h2>
+    <p>Informações sobre controle de manutenção, vida util do equipamento, disponibilidade, manutenção e outros.</p>
+    <button class="button" onclick="location.href='pcm.html'">Acessar Projeto</button>
+  </div>
+
+  <div class="card" onmouseover="showButton(this)" onmouseout="hideButton(this)">
+    <h2>FINAN/CONTAB:</h2>
+    <p>Informações sobre fluxo de caixa, DRE, Balancete e outros.</p>
+    <button class="button" onclick="location.href='finan_contabi.html'">Acessar Projeto</button>
+  </div>
+  
+  <div class="card" onmouseover="showButton(this)" onmouseout="hideButton(this)">
+    <h2>RECUR.HUMANOS:</h2>
+    <p>Informações sobre, funcionarios ativos/desligados, horas extras, jornada de trabalho e outros.</p>
+    <button class="button" onclick="location.href='recursoshumanos.html'">Acessar Projeto</button>
+  </div>
+
+  <div class="card" onmouseover="showButton(this)" onmouseout="hideButton(this)">
+    <h2>INFORMATICA T.I:</h2>
+    <p>Informações sobre, aprovador objeto de custo, equipamento informatica e outros.</p>
+    <button class="button" onclick="location.href='informatica_ti.html'">Acessar Projeto</button>
+  </div>
+  
+  <div class="card" onmouseover="showButton(this)" onmouseout="hideButton(this)">
+    <h2>GERENCIAL:</h2>
+    <p>Informações sobre gestão de negócios e outros</p>
+    <button class="button" onclick="location.href='gerencial.html'">Acessar Projeto</button>
+  </div>
+
+</div>
+ 
+
+  <script>
+    function showButton(card) {
+      var button = card.querySelector('.button');
+      button.style.display = 'block';
+    }
+    
+    function hideButton(card) {
+      var button = card.querySelector('.button');
+      button.style.display = 'none';
+    }
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio Pessoal</title>
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+
+<style>
+
+.logo{
+    margin-top: 25px;
+    position: relative;
+    height: auto;
+    text-align: center;
+    max-width: "450";
+    max-height:"80";
+    margin-left: 65px;
+
+ } 
+
+
+</style>
+
+
+
+<body>
+     
+
+
+<!--começa os menus-->  
+
+  <nav> 
+          <ul>
+              <li class="active"> <a href="index.html">Home</a></li>
+              <li> <a href="sobre.html">Duvidas</a></li>
+              <li class="menu"> <a href="portifolio.html">Portifolio</a>         
+                </li>
+         
+
+          </ul>
+
+
+   
+  </nav> 
+
+  <div class ="logo">
+    <img src="./image/logo-com-fundo.png"
+    width="420"
+    height="80"
+    alt="logo"
+    />
+   </div>
+
+  <script src="script.js"></script>
+
+
+  <h1 class="conteudo">SOBRE NÓS</h1> 
+  <p class="texto">
+    Produzimos energias que mobilizam pessoas e potencializam negócios, hoje e amanhã.
+  Nosso principal investimento é a energia limpa e renovável.
+  </p>
+  
+ <h3 class="chamada">
+  Com a cana-de-açúcar e subprodutos do processo industrial produzimos:
+ </h3> 
+ 
+
+
+  <h1 class="conteudo2">ETANOL</h1> 
+  <p class="texto">
+    O etanol produzido por meio da cana-de-açúcar apresenta, em média, 80% a menos de emissão de gases de efeito estufa (GEE), se comparado à gasolina brasileira. Além de ter fins mais versáteis, já que da mesma cana podemos extrair diferentes tipos de etanol, para diferentes fins: etanol hidratado (combustível), etanol anidro e neutro.
+
+    
+  </p>
+
+  <h1 class="conteudo3">BIOELETRICIDADE</h1> 
+  <p class="texto">
+    A cogeração de energia a partir de biomassa atende a necessidade energética da usina e proporciona a geração de excedentes de energia elétrica, exportados para o sistema elétrico brasileiro (ONS).
+    Além disso, é uma fonte previsível e estável de energia, que tem seu pico de produção justamente no período mais seco do ano, quando a matriz hídrica fica mais pressionada.
+  </p>
+
+  <h1 class="conteudo3">BIOFERTILIZANTES</h1> 
+  <p class="texto">
+    A vinhaça e a torta, subprodutos gerados ao se produzir etanol, retornam para o campo e são utilizados para adubação, o mesmo ocorre com as cinzas geradas na queima do bagaço para produção da bioeletricidade
+  </p>
+
+
+ <div class="timile">
+  <img src="./image/capa 4.svg" alt="tempo">
+ </div>
+    
+
+
+
+  <script>
+    function mostrarIframe(id) {
+        // Esconde todos os iframes
+        var iframes = document.querySelectorAll('iframe');
+        iframes.forEach(function(iframe) {
+            iframe.style.display = 'none';
+        });
+        
+        // Mostra apenas o iframe com o id correspondente
+        var iframeMostrar = document.getElementById(id);
+        iframeMostrar.style.display = 'block';
+
+        // Atualiza o título do projeto com base no iframe selecionado
+        document.getElementById('titulo_projeto').textContent = "| Relatório de " + id + " | F11 tela cheia 💻";
+    }
+  </script>
+
+
+</body>
+</html>
